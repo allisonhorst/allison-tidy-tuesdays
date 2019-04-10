@@ -5,29 +5,10 @@ Allison Horst
 
 ``` r
 library(tidyverse)
-```
-
-    ## ── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
-
-    ## ✔ ggplot2 3.1.0.9000     ✔ purrr   0.3.2.9000
-    ## ✔ tibble  2.1.1          ✔ dplyr   0.8.0.9012
-    ## ✔ tidyr   0.8.3.9000     ✔ stringr 1.4.0     
-    ## ✔ readr   1.3.1          ✔ forcats 0.4.0
-
-    ## ── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-    ## ✖ dplyr::filter() masks stats::filter()
-    ## ✖ dplyr::lag()    masks stats::lag()
-
-``` r
 library(RColorBrewer)
 library(wesanderson)
 library(ggpomological)
 library(extrafont)
-```
-
-    ## Registering fonts with R
-
-``` r
 library(LaCroixColoR)
 
 # font_import()
@@ -148,11 +129,13 @@ ggplot(f_appear, aes(x = reorder(player, desc(player)), y = n)) +
   scale_y_continuous(expand = c(0,0), limits = c(0,90)) +
   scale_fill_manual(values = pal, name = "Outcome:") +
   labs(x = "", y = "Number of appearances\n(beyond qualifiers)", title = "Top Grand Slam appearances & outcomes") +
-  theme(legend.position = "bottom", axis.text.x=element_text(size=11, face = "bold", hjust = 1), axis.text.y = element_text(size = 10, color = "slateblue4")) +
+  theme(legend.position = "bottom", 
+        legend.justification='left',
+        axis.text.x=element_text(size=11, face = "bold", hjust = 1), axis.text.y = element_text(size = 10, color = "slateblue4")) +
   coord_flip()
 ```
 
-![](tidy_tuesday_4_9_19_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+<img src="tidy_tuesday_4_9_19_files/figure-gfm/unnamed-chunk-11-1.png" width="768" />
 
 Save it:
 
@@ -173,9 +156,10 @@ ggplot(m_appear, aes(x = reorder(player, desc(player)), y = n)) +
   scale_fill_manual(values = pal,
                     name = "Outcome:") +
   labs(x = "", y = "Number of appearances", title = "Grand Slam Appearances Colorblast") +
-  theme(legend.position = "bottom",
+  theme(legend.position="bottom",
+        legend.justification = "left",
         axis.text.x=element_text(size=10, face = "bold", angle = 50, hjust = 1)) +
   coord_flip()
 ```
 
-![](tidy_tuesday_4_9_19_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+<img src="tidy_tuesday_4_9_19_files/figure-gfm/unnamed-chunk-13-1.png" width="768" />
