@@ -4,6 +4,7 @@
 #' output: github_document
 #' ---
 
+#+ message = FALSE, warning = FALSE
 library(tidyverse)
 library(RColorBrewer)
 library(wesanderson)
@@ -87,7 +88,7 @@ m_appear$outcome <- fct_relevel(m_appear$outcome,"Won", "Finalist","Semi-finalis
 pal <- lacroix_palette("PassionFruit", n = 8, type = "continuous")
 
 #' Graph of female top appearances:
-#+ dpi = 250
+#+ fig.retina = 3, fig.width = 8
 ggplot(f_appear, aes(x = reorder(player, desc(player)), y = n)) +
   geom_col(aes(fill = outcome)) +
   theme_pomological(base_family = "Courier New", base_size = 12) +
@@ -95,14 +96,16 @@ ggplot(f_appear, aes(x = reorder(player, desc(player)), y = n)) +
   scale_y_continuous(expand = c(0,0), limits = c(0,90)) +
   scale_fill_manual(values = pal, name = "Outcome:") +
   labs(x = "", y = "Number of appearances\n(beyond qualifiers)", title = "Top Grand Slam appearances & outcomes") +
-  theme(legend.position = "bottom", axis.text.x=element_text(size=11, face = "bold", hjust = 1), axis.text.y = element_text(size = 10, color = "slateblue4")) +
+  theme(legend.position = "bottom", 
+        legend.justification='left',
+        axis.text.x=element_text(size=11, face = "bold", hjust = 1), axis.text.y = element_text(size = 10, color = "slateblue4")) +
   coord_flip()
 
 #' Save it:
 ggsave("my_tennis_plot.png", width = 8, height = 7)
 
 #' Male version:
-#+ dpi = 250
+#+ fig.retina = 3, fig.width = 8
 ggplot(m_appear, aes(x = reorder(player, desc(player)), y = n)) +
   geom_col(aes(fill = outcome)) +
   theme_pomological(base_family = "Courier New",
@@ -113,7 +116,8 @@ ggplot(m_appear, aes(x = reorder(player, desc(player)), y = n)) +
   scale_fill_manual(values = pal,
                     name = "Outcome:") +
   labs(x = "", y = "Number of appearances", title = "Grand Slam Appearances Colorblast") +
-  theme(legend.position = "bottom",
+  theme(legend.position="bottom",
+        legend.justification = "left",
         axis.text.x=element_text(size=10, face = "bold", angle = 50, hjust = 1)) +
   coord_flip()
 
