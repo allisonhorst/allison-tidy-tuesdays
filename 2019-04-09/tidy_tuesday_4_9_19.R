@@ -8,6 +8,7 @@ library(wesanderson)
 library(ggpomological)
 library(extrafont)
 library(LaCroixColoR)
+library(ggdark)
 
 # font_import()
 
@@ -16,7 +17,7 @@ library(LaCroixColoR)
 
 # grand_slams <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-09/grand_slams.csv")
 
-# grand_slam_timeline <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-09/grand_slam_timeline.csv")
+grand_slam_timeline <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-09/grand_slam_timeline.csv")
 
 # This seems like excessive grouping and ungrouping, mer?
 
@@ -87,16 +88,24 @@ pal <- lacroix_palette("PassionFruit", n = 8, type = "continuous")
 # Graph of female top appearances:
 ggplot(f_appear, aes(x = reorder(player, desc(player)), y = n)) +
   geom_col(aes(fill = outcome)) +
-  theme_pomological(base_family = "Courier New", base_size = 12) +
+  dark_mode(theme_pomological(base_family = "Courier New", base_size = 12)) +
   scale_x_discrete(expand = c(0,0)) +
   scale_y_continuous(expand = c(0,0), limits = c(0,90)) +
   scale_fill_manual(values = pal, name = "Outcome:") +
-  labs(x = "", y = "Number of appearances\n(beyond qualifiers)", title = "Top Grand Slam appearances & outcomes") +
-  theme(legend.position = "bottom", axis.text.x=element_text(size=11, face = "bold", hjust = 1), axis.text.y = element_text(size = 10, color = "slateblue4")) +
+  labs(x = "", y = "Number of appearances\n(beyond qualifiers)", title = "Grand Slam appearances & outcomes") +
+  theme(legend.position = "bottom",
+        axis.text.x=element_text(size=11, face = "bold", hjust = 1, color = "deeppink"),
+        axis.text.y = element_text(size = 10, color = "chartreuse", face = "bold"),
+        axis.title.x = element_text(color = "cyan3", face = "bold"),
+        legend.title = element_text(color = "deeppink", size = 12, face = "bold"),
+        legend.text = element_text(color = "chartreuse", face = "bold"),
+        plot.title = element_text(color = "cyan3", face = "bold"),
+        panel.border = element_rect(colour = "cyan3")) +
   coord_flip()
 
 # Save it:
 ggsave("my_tennis_plot.png", width = 8, height = 7)
+
 
 # Male version:
 ggplot(m_appear, aes(x = reorder(player, desc(player)), y = n)) +
@@ -108,10 +117,14 @@ ggplot(m_appear, aes(x = reorder(player, desc(player)), y = n)) +
                      limits = c(0,80)) +
   scale_fill_manual(values = pal,
                     name = "Outcome:") +
-  labs(x = "", y = "Number of appearances", title = "Grand Slam Appearances Colorblast") +
+  labs(x = "", y = "Number of appearances\n(beyond qualifiers)",
+       title = "Grand Slam Appearances Colorblast") +
   theme(legend.position = "bottom",
-        axis.text.x=element_text(size=10, face = "bold", angle = 50, hjust = 1)) +
+        axis.text.x=element_text(size=10, face = "bold", angle = 50, hjust = 1),
+        axis.text.y = element_text(size = 10, color = "slateblue4")) +
   coord_flip()
+
+ggsave("my_tennis_plot_m.png", width = 8, height = 7)
 
 
 
