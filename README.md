@@ -1,5 +1,7 @@
-# Allison's #tidytuesday outcomes 
+# Allison's #tidytuesday efforts  
 See <https://github.com/rfordatascience/tidytuesday> for data sources, summary, etc. 
+
+*Disclaimer: My focus for #tidytuesdays is practicing my data wrangling & visualization skills, making obnoxiously neon graphs, and having fun. These results/outcomes are not meant to be professional data visualizations, and might not even be correct. Use accordingly.*
 
 For code:
 
