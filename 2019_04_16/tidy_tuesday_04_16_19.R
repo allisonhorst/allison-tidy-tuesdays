@@ -108,13 +108,13 @@ ggplot(brexit_2, aes(x = date, y = percent, group = response)) +
   ) +
   labs(x = "Date", y = "Percentage Responding\n(Brexit right or wrong?)")
 
-# Nevermind I want to make on like the better version...
+# Nevermind I want to make one like the better version...
 
 # Wrangling for dates:
 brexit_3 <- brexit %>%
   mutate(date = dmy(date))
 
-ggplot(brexit_3) +
+brex_graph <- ggplot(brexit_3) +
   geom_point(aes(x = date, y = percent_responding_right), color = "orange") +
   geom_point(aes(x = date, y = percent_responding_wrong), color = "purple") +
   dark_mode(theme_pubclean()) +
