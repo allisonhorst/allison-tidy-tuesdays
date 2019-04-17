@@ -1,6 +1,6 @@
 # Tidy Tuesday 4/16/19
 # Allison Horst
-# Take a pretty nice graph, and make it an absolute abomination
+# Take a decent graph, and make it an absolute abomination
 
 
 #######
@@ -17,6 +17,8 @@ library(cowplot)
 #######
 # Get data (needed here: brexit, corbyn, dogs)
 #######
+
+# Thanks to Sarah Leo and The Economist for these ("Mistakes, We've Drawn a Few") data!
 
 # brexit <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-16/brexit.csv")
 
@@ -199,3 +201,5 @@ ggdraw() +
                   x = c(0, 0, 0.52), y = c(0.98, 0.5, 0.5))
 
 ggsave("cowplot_test.png", width = 8, height = 10, units = "in")
+
+write_csv(dogs_2, "my_dog_file.csv")
