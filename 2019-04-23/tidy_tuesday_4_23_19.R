@@ -27,7 +27,8 @@ tidy_anime <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience
 # Simplify with all shows:
 
 all_shows <- tidy_anime %>%
-  select(-synopsis, - background)
+  select(-synopsis, - background) %>%
+  distinct(name, .keep_all = TRUE)
 
 # Find and keep shows from the top 10 most common genres (by # of shows in genre):
 top_genres <- tidy_anime %>%
