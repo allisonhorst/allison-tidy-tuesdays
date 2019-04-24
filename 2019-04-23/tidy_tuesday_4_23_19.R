@@ -2,15 +2,13 @@
 # Allison Horst
 # Anime!
 
-# Goals this week: more cowplot!
+# Goals this week: fun!
 
 #######
 # Load packages
 #######
 
 library(tidyverse)
-library(cowplot)
-library(ggridges)
 library(ggdark)
 library(extrafont)
 
