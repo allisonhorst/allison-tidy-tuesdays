@@ -10,3 +10,7 @@ For code:
 
 [2019-04-16: The Economist's Graph Mistakes...Hold My Beer](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-%2004-16)
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-%2004-16/cowplot_test.png" width="600">
+
+[2019-04-23: In anime, higher scores != higher popularity](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-04-23)
+<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/images/anime.png" width="600">
+
