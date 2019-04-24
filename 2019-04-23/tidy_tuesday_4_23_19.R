@@ -85,10 +85,9 @@ ggplot(all_shows, aes(x = score, y = popularity)) +
                                   "orange",
                                   "yellow",
                                   "white"),
-                       breaks = seq(0,1000, by = 200),
                        name = "Number of shows:") +
   guides(fill = guide_colourbar(ticks = TRUE,
-                                barwidth = 22,
+                                barwidth = 20,
                                 barheight = 0.5,
                                 direction = "horizontal",
                                 title.position = "top")) +
