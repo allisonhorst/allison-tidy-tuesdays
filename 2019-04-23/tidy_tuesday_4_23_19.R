@@ -96,20 +96,13 @@ ggplot(all_shows, aes(x = score, y = popularity)) +
                      limits = c(0,10),
                      breaks = seq(0,10, by = 2)) +
   labs(x = "Score (higher = better)",
-       y = "Popularity\n(Members with show in MyAnimeList)",
+       y = "Popularity\n(members with show in MyAnimeList)",
        title = "Anime: higher scores don't = greater popularity") +
   ggdark::dark_theme_bw() +
   theme(text = element_text(family = "Andale Mono"),
         panel.spacing.x = unit(1.0, "lines"),
         panel.spacing.y = unit(1.0, "lines"),
         legend.position = "bottom"
-        )#  +
-  # facet_wrap(~genre)
+  )
 
-
-# Some other analyses
-
-ggplot(top_genres, aes(x = start_date)) +
-  geom_density() +
-  facet_wrap(~genre)
-
+ggsave("anime.png", width = 8, height = 7)
