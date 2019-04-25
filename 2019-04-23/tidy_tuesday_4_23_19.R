@@ -73,11 +73,13 @@ scientific_10 <- function(x) {
   parse(text=gsub("e", "%*% 10^", scales::scientific_format()(x)))
 }
 
+# Add: 'label = scientific_10' argument in scale_y_continuous for scientific notation
+
 # Then a graph of score vs. popularity:
 
 ggplot(all_shows, aes(x = score, y = popularity)) +
   geom_hex(bins = 50,
-           binwidth = c(0.2, 400)) +
+           binwidth = c(0.2, 430)) +
   scale_fill_gradientn(colors = c("slateblue4",
                                   "brown1",
                                   "orange",
@@ -89,18 +91,20 @@ ggplot(all_shows, aes(x = score, y = popularity)) +
                                 barheight = 0.5,
                                 direction = "horizontal",
                                 title.position = "top")) +
-  scale_y_continuous(expand = c(0,0), label = scientific_10) +
+  scale_y_continuous(expand = c(0,0)) +
   scale_x_continuous(expand = c(0,0),
                      limits = c(0,10),
                      breaks = seq(0,10, by = 2)) +
+  scale_y_reverse() +
   labs(x = "Score (higher = better)",
-       y = "Popularity\n(members with show in MyAnimeList)",
-       title = "Anime: higher scores don't = greater popularity") +
+       y = "Popularity\n(lower = higher popularity)",
+       title = "Anime (update)") +
   ggdark::dark_theme_bw() +
   theme(text = element_text(family = "Andale Mono"),
        # panel.spacing.x = unit(1.0, "lines"),
        # panel.spacing.y = unit(1.0, "lines"),
-        legend.position = "bottom"
+        legend.position = "bottom",
+       plot.margin=unit(c(1,1,1,1),"cm")
   )
 
 ggsave("anime.png", width = 8, height = 7)
