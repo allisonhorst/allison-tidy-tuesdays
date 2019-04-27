@@ -67,6 +67,8 @@ ggplot(top_genres, aes(x = score, y = popularity)) +
   theme_dark() +
   scale_color_manual(values = c("red","orange","yellow","purple","black","white"))
 
+# FINAL GRAPH STUFF: Relationship btwn popularity and score for all shows...
+
 # Make function for nice scientific notation (help from: https://stackoverflow.com/questions/10762287/how-can-i-format-axis-labels-with-exponents-with-ggplot2-and-scales/45867076)
 
 scientific_10 <- function(x) {
