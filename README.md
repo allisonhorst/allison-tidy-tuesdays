@@ -20,3 +20,9 @@ For code:
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/images/anime.png" width="600">
 
+
+
+[2019-04-30: Bird collisions](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-04-30)
+
+<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-04-30/bird_collision_circles.png" width="600">
+
