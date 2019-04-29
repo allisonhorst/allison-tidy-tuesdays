@@ -9,7 +9,8 @@
 # Get data:
 
 bird_collisions <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-30/bird_collisions.csv")
-mp_light <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-30/mp_light.csv")
+
+# mp_light <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-30/mp_light.csv")
 
 #----------------
 # Get packages:
@@ -18,9 +19,6 @@ library(tidyverse)
 library(lubridate)
 library(ggmosaic)
 library(packcircles)
-library(ggiraph)
-library(viridis)
-library(igraph)
 library(ggrepel)
 
 #----------------
@@ -61,14 +59,18 @@ ggplot(bird_sum) +
 #----------------
 # Circle packing try...
 
-circles <- circleProgressiveLayout(bird_sum2$n, sizetype='area')
+# Make circles!
 
-data <- data.frame(bird_sum2, circles) %>%
+circles <- packcircles::circleProgressiveLayout(bird_tot$n, sizetype='area')
+
+data <- data.frame(bird_tot, circles) %>%
   mutate(id = row_number())
 
-data_vertices <- circleLayoutVertices(circles, npoints=100)
+data_vertices <- circleLayoutVertices(circles, npoints=6)
 data_join <- full_join(data, data_vertices)
 data_min_join <- left_join(data, data_vertices)
+
+# Create final circle graph:
 
 ggplot() +
   geom_polygon(data = data_join,
@@ -78,12 +80,12 @@ ggplot() +
                color = "NA") +
    geom_polygon(data = data_vertices,
                aes(x, y, group = id),
-               size = 0.2,
-               fill = NA) +
-  scale_fill_manual(values = c("dodgerblue","blueviolet"),
-                    breaks = c("No","Yes"),
+               size = 0.5,
+               fill = NA,
+               color = "gray50") +
+  scale_fill_manual(values = c("darkorange1","gold","magenta"),
+                    breaks = c("No","Yes","Rare"),
                     name = "FLIGHT CALL?") +
-  scale_color_manual(values = c("red","green")) +
   geom_text_repel(data = data_min_join,
                   aes(x, y, label = family, size = radius),
                   segment.size = 0.2,
@@ -100,8 +102,8 @@ ggplot() +
         legend.text = element_text(color = "white", size = 14),
         legend.title = element_text(color = "white", size = 18),
         text = element_text(family = "Arial"),
-        panel.background = element_rect(color = "NA", fill = "gray10"),
-        plot.background = element_rect(fill = "gray10"),
+        panel.background = element_rect(color = "NA", fill = "gray20"),
+        plot.background = element_rect(fill = "gray20"),
         plot.margin=unit(c(1,1,1,1),"cm")
         ) +
   coord_equal()
