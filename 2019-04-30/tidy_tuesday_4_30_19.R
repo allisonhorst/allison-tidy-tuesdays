@@ -93,7 +93,8 @@ ggplot() +
                   segment.color = "white",
                   color = "white",
                   force = 1,
-                  family = "Arial"
+                  family = "Arial",
+                  fontface = "italic"
                   ) +
   scale_radius(range = c(2,8), guide = "none") +
   labs(x = "", y = "") +
@@ -101,7 +102,7 @@ ggplot() +
   theme(legend.position = "bottom",
         legend.text = element_text(color = "white", size = 14),
         legend.title = element_text(color = "white", size = 18),
-        text = element_text(family = "Arial"),
+        text = element_text(family = "Arial Black"),
         panel.background = element_rect(color = "NA", fill = "gray20"),
         plot.background = element_rect(fill = "gray20"),
         plot.margin=unit(c(1,1,1,1),"cm")
