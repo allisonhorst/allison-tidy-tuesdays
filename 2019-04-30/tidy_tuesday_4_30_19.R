@@ -66,7 +66,7 @@ circles <- packcircles::circleProgressiveLayout(bird_tot$n, sizetype='area')
 data <- data.frame(bird_tot, circles) %>%
   mutate(id = row_number())
 
-data_vertices <- circleLayoutVertices(circles, npoints=40)
+data_vertices <- circleLayoutVertices(circles, npoints=100)
 data_join <- full_join(data, data_vertices)
 data_min_join <- left_join(data, data_vertices)
 
