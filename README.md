@@ -17,13 +17,13 @@ For code:
 
 
 
-[2019-04-23: Anime!](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-04-23)
+[2019-04-23: Anime!](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-04-23)
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/images/anime.png" width="500">
 
 
 
-[2019-04-30: Bird collisions in Chicago](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-04-30)
+[2019-04-30: Bird collisions in Chicago](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-04-30)
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-04-30/bird_collision_circles.png" width="600">
 
