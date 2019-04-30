@@ -66,7 +66,7 @@ circles <- packcircles::circleProgressiveLayout(bird_tot$n, sizetype='area')
 data <- data.frame(bird_tot, circles) %>%
   mutate(id = row_number())
 
-data_vertices <- circleLayoutVertices(circles, npoints=6)
+data_vertices <- circleLayoutVertices(circles, npoints=40)
 data_join <- full_join(data, data_vertices)
 data_min_join <- left_join(data, data_vertices)
 
@@ -82,17 +82,17 @@ ggplot() +
                aes(x, y, group = id),
                size = 0.5,
                fill = NA,
-               color = "gray50") +
-  scale_fill_manual(values = c("slateblue1","seagreen1","orchid"),
-                    breaks = c("No","Yes","Rare"),
-                    name = "FLIGHT CALL?") +
+               color = NA) +
+  scale_fill_manual(values = c("slateblue1","darkorange","magenta"),
+                    breaks = c("No","Rare", "Yes"),
+                    name = "Flight call?") +
   geom_text_repel(data = data_min_join,
                   aes(x, y, label = family, size = radius),
                   segment.size = 0.2,
-                  min.segment.length = 0.2,
-                  segment.color = "white",
-                  color = "white",
-                  force = 1,
+                  min.segment.length = 0.4,
+                  segment.color = "black",
+                  color = "black",
+                  force = 35,
                   family = "Arial",
                   fontface = "italic"
                   ) +
@@ -100,11 +100,9 @@ ggplot() +
   labs(x = "", y = "") +
   theme_void() +
   theme(legend.position = "bottom",
-        legend.text = element_text(color = "white", size = 14),
-        legend.title = element_text(color = "white", size = 18),
+        legend.text = element_text(color = "black", size = 14),
+        legend.title = element_text(color = "black", size = 18),
         text = element_text(family = "Arial"),
-        panel.background = element_rect(color = "NA", fill = "gray20"),
-        plot.background = element_rect(fill = "gray20"),
         plot.margin=unit(c(1,1,1,1),"cm")
         ) +
   coord_equal()
