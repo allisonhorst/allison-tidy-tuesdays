@@ -83,7 +83,7 @@ ggplot() +
                size = 0.5,
                fill = NA,
                color = NA) +
-  scale_fill_manual(values = c("slateblue1","darkorange","magenta"),
+  scale_fill_manual(values = c("darkorange","cyan4","slateblue1"),
                     breaks = c("No","Rare", "Yes"),
                     name = "Flight call?") +
   geom_text_repel(data = data_min_join,
@@ -100,10 +100,9 @@ ggplot() +
   labs(x = "", y = "") +
   theme_void() +
   theme(legend.position = "bottom",
-        legend.text = element_text(color = "black", size = 14),
-        legend.title = element_text(color = "black", size = 18),
-        text = element_text(family = "Arial"),
-        plot.margin=unit(c(1,1,1,1),"cm")
+        legend.text = element_text(color = "black", size = 10),
+        legend.title = element_text(color = "black", size = 12),
+        text = element_text(family = "Arial")
         ) +
   coord_equal()
 
