@@ -5,25 +5,27 @@ See <https://github.com/rfordatascience/tidytuesday> for data sources, summary, 
 
 For code:
 
-[2019-04-09: Tennis Grand Slams (aka Passionfruit Grand Slam Graph)](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-04-09]2019-04-09)
+## [2019-04-09: Tennis Grand Slams (aka Passionfruit Grand Slam Graph)](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-04-09]2019-04-09)
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/images/my_tennis_plot.png" width="500">
 
 
 
-[2019-04-16: The Economist's Graph Mistakes...Hold My Beer](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-04-16)
+## [2019-04-16: The Economist's Graph Mistakes...Hold My Beer](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-04-16)
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-04-16/cowplot_test.png" width="500">
 
 
 
-[2019-04-23: Anime!](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-04-23)
+## [2019-04-23: Anime!](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-04-23)
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/images/anime.png" width="500">
 
 
 
-[2019-04-30: Bird collisions in Chicago](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-04-30)
+## [2019-04-30: Bird collisions in Chicago](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-04-30)
+
+Citation: Winger BM, Weeks BC, Farnsworth A, Jones AW, Hennen M, Willard DE (2019) Data from: Nocturnal flight-calling behaviour predicts vulnerability to artificial light in migratory birds. Dryad Digital Repository. https://doi.org/10.5061/dryad.8rr0498
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-04-30/bird_collision_circles.png" width="600">
 
