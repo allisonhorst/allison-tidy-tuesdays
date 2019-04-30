@@ -97,7 +97,9 @@ ggplot() +
                   fontface = "italic"
                   ) +
   scale_radius(range = c(2,8), guide = "none") +
-  labs(x = "", y = "") +
+  labs(x = "", y = "",
+       title = "Bird collisions in Chicago by family",
+       subtitle = "Circle areas ~ Number of collisions") +
   theme_void() +
   theme(legend.position = "bottom",
         legend.text = element_text(color = "black", size = 10),
@@ -106,5 +108,5 @@ ggplot() +
         ) +
   coord_equal()
 
-ggsave("bird_collision_circles.png")
+ggsave("2019-04-30/bird_collision_circles.png")
 
