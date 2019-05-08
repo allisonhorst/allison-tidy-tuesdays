@@ -29,3 +29,10 @@ Citation: Winger BM, Weeks BC, Farnsworth A, Jones AW, Hennen M, Willard DE (201
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-04-30/bird_collision_circles.png" width="600">
 
+## [2019-05-07: Global student-teacher ratios (UNESCO)](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-05-07)
+
+<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/images/student_ratios_map.png" width="600">
+
+
+
+
