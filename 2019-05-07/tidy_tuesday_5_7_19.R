@@ -56,3 +56,5 @@ ggplot() +
 # plot.margin = margin(1, 1, 1, 1, "cm")
 
 ggsave("images/student_ratios_map.png", width = 8, height = 5)
+
+# Some extra code to test...
