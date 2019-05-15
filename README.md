@@ -27,15 +27,15 @@ For code:
 
 Citation: Winger BM, Weeks BC, Farnsworth A, Jones AW, Hennen M, Willard DE (2019) Data from: Nocturnal flight-calling behaviour predicts vulnerability to artificial light in migratory birds. Dryad Digital Repository. https://doi.org/10.5061/dryad.8rr0498
 
-<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-04-30/bird_collision_circles.png" width="600">
+<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-04-30/bird_collision_circles.png" width="500">
 
 ## [2019-05-07: Global student-teacher ratios (UNESCO)](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-05-07)
 
-<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/images/student_ratios_map.png" width="600">
+<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/images/student_ratios_map.png" width="500">
 
 ## [2019-05-14: Individual Nobel Prize Winners ggScarf](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-05-14)
 
-<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-05-14/nobel_winners.png" width="600">
+<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-05-14/nobel_winners.png" width="500">
 
 
 
