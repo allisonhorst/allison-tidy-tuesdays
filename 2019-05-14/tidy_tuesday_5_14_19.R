@@ -14,6 +14,9 @@ nobel_winners <- readr::read_csv("https://raw.githubusercontent.com/rfordatascie
 library(tidyverse)
 library(lubridate)
 library(extrafont)
+library(showtext)
+
+font_add_google(name = "Quicksand", family = "quicksand")
 
 # Some wrangling
 
@@ -104,7 +107,7 @@ ggplot(all_nobels, aes(y = all_rand,
         axis.text.x = element_text(color = "gray70"),
         plot.margin=unit(c(1,1,1,1.2),"cm"),
         plot.title = element_text(color = "gray60"),
-        text = element_text(family = "Tahoma")
+        text = element_text(family = "Times New Roman")
   )
 
 ggsave("2019-05-14/nobel_winners.png", width = 7, height = 7)
