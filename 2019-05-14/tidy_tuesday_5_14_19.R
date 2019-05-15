@@ -14,9 +14,6 @@ nobel_winners <- readr::read_csv("https://raw.githubusercontent.com/rfordatascie
 library(tidyverse)
 library(lubridate)
 library(extrafont)
-library(showtext)
-
-font_add_google(name = "Quicksand", family = "quicksand")
 
 # Some wrangling
 
@@ -107,9 +104,39 @@ ggplot(all_nobels, aes(y = all_rand,
         axis.text.x = element_text(color = "gray70"),
         plot.margin=unit(c(1,1,1,1.2),"cm"),
         plot.title = element_text(color = "gray60"),
-        text = element_text(family = "Times New Roman")
+        text = element_text(family = "Trebuchet MS")
   )
 
+
+ggplot(all_nobels, aes(y = all_rand,
+                       ymin = 0,
+                       x = year_jitter_all,
+                       ymax = all_rand)) +
+  geom_linerange(size = 1.5,
+                 aes(color = gender),
+                 alpha = 0.4) +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,1), limits = c(1901, 2016), breaks = c(1901,2016)) +
+  scale_color_manual(values = c("mediumorchid4","cyan")) +
+  facet_wrap(~category, ncol = 1, strip.position = "left") +
+  theme_minimal() +
+  labs(title = "Individual Nobel Prize Winners\n1901 - 2016") +
+  theme(panel.background = element_rect(fill = "black"),
+        plot.background = element_rect(fill = "black"),
+        legend.position = "NA",
+        legend.title = element_blank(),
+        legend.text = element_text(color = "gray60", size = 10),
+        strip.text = element_blank(color = "gray60", size = 9),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.text.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_text(color = "gray70"),
+        plot.margin=unit(c(1,1,1,1.2),"cm"),
+        plot.title = element_text(color = "gray60"),
+        text = element_text(family = "Trebuchet MS")
+  )
 ggsave("2019-05-14/nobel_winners.png", width = 7, height = 7)
 
 # Get some summary counts:
