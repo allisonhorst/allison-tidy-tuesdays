@@ -120,24 +120,23 @@ ggplot(all_nobels, aes(y = all_rand,
   scale_color_manual(values = c("mediumorchid4","cyan")) +
   facet_wrap(~category, ncol = 1, strip.position = "left") +
   theme_minimal() +
-  labs(title = "Individual Nobel Prize Winners\n1901 - 2016") +
   theme(panel.background = element_rect(fill = "black"),
         plot.background = element_rect(fill = "black"),
         legend.position = "NA",
         legend.title = element_blank(),
-        legend.text = element_text(color = "gray60", size = 10),
-        strip.text = element_blank(color = "gray60", size = 9),
+        legend.text = element_blank(),
+        strip.text = element_blank(),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         axis.text.y = element_blank(),
         axis.title.x = element_blank(),
         axis.title.y = element_blank(),
-        axis.text.x = element_text(color = "gray70"),
+        axis.text.x = element_blank(),
         plot.margin=unit(c(1,1,1,1.2),"cm"),
         plot.title = element_text(color = "gray60"),
         text = element_text(family = "Trebuchet MS")
   )
-ggsave("2019-05-14/nobel_winners.png", width = 7, height = 7)
+ggsave("2019-05-14/nobel_winners_vague.png", width = 7, height = 7)
 
 # Get some summary counts:
 
