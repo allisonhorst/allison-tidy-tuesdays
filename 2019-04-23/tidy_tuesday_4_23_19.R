@@ -102,7 +102,7 @@ ggplot(all_shows, aes(x = score, y = popularity)) +
        y = "Popularity\n(lower = higher popularity)",
        title = "Anime (update)") +
   ggdark::dark_theme_bw() +
-  theme(text = element_text(family = "PT Mono"),
+  theme(text = element_text(family = "Carrois Gothic SC"),
        # panel.spacing.x = unit(1.0, "lines"),
        # panel.spacing.y = unit(1.0, "lines"),
         legend.position = "bottom",
