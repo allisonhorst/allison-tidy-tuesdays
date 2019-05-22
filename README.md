@@ -37,6 +37,11 @@ Citation: Winger BM, Weeks BC, Farnsworth A, Jones AW, Hennen M, Willard DE (201
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-05-14/nobel_winners.png" width="500">
 
+## [2019-05-21: Global plastics](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-05-20)
+
+<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-05-20/plastic_treemap.png" width="500">
+
+
 
 
 
