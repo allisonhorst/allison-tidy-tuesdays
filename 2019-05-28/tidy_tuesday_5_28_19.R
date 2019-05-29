@@ -65,4 +65,4 @@ ggplot(wine_all, aes(x = reorder(country, desc(country)), y = pp_ratio)) +
         plot.subtitle = element_text(size = 8, face = "italic")) +
   coord_flip()
 
-ggsave("2019-05-28/wine_deals.png", width = 8, height = 7)
+ggsave("2019-05-28/wine_deals.png", width = 5, height = 4)
