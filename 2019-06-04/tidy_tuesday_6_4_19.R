@@ -174,7 +174,7 @@ ggplot(ramen_top_brands, aes(x = stars, y = brand)) +
                       color = "NA") +
   scale_fill_manual(values = pal_4) +
   scale_color_manual(values = pal_4) +
-  scale_x_continuous(breaks = c(0,5)) +
+  scale_x_continuous(breaks = c(0,1,2,3,4,5), limits = c(0,5), expand = c(0,0)) +
   theme_minimal() +
   theme(text = element_text(family = "Carrois Gothic"),
         legend.position = "NA",
