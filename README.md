@@ -45,6 +45,10 @@ Citation: Winger BM, Weeks BC, Farnsworth A, Jones AW, Hennen M, Willard DE (201
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-05-28/wine_deals.png" width="500">
 
+## [2019-06-04: Ramen ratings](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-06-04)
+
+<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-05-28/ramen_ridges.png" width="500">
+
 
 
 
