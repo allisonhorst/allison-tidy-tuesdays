@@ -41,7 +41,9 @@ Citation: Winger BM, Weeks BC, Farnsworth A, Jones AW, Hennen M, Willard DE (201
 
 <img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-05-20/plastic_treemap.png" width="500">
 
+## [2019-05-28: Bounce for your ounce wine deals](https://github.com/allisonhorst/allison-tidy-tuesdays/tree/master/2019-05-28)
 
+<img src="https://github.com/allisonhorst/allison-tidy-tuesdays/blob/master/2019-05-28/wine_deals.png" width="500">
 
 
 
